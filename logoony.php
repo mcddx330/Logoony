@@ -13,7 +13,7 @@ class Logoony{
     return self::fetchLogoonResult($this->target_text);
   }
 
-  private function fetchLogoonResult($text=null){
+  public static function fetchLogoonResult($text=null){
     $lgres = array(); // 最終結果
     $postdata = array(); // POST通信用素材
     $reshtml = array(); // 結果ページ内容管理
@@ -130,7 +130,7 @@ class Logoony{
   }
 
   // 著者とスコアのみを抽出
-  private function fetchScore($preged_array){
+  private static function fetchScore($preged_array){
     $arrcount = $skipcount = 0;
     $skipnum = 2;
     for($i=0;$i<count($preged_array);$i++){
